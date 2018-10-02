@@ -1,0 +1,6 @@
+.idea/workspace.xml
+.DS_Store
+*.tfstate
+.terraform/
+terraform.tfvars
+

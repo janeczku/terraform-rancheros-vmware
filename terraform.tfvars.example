@@ -1,0 +1,31 @@
+cluster_name = "terraform-demo"
+masters_static_ips = [
+   "192.168.100.40/24",
+   "192.168.100.41/24",
+   "192.168.100.42/24",
+ ]
+workers_static_ips = [
+   "192.168.100.43/24",
+ ]
+
+vcenter_user = "username"
+vcenter_password = "password"
+vcenter_server = "vcenter.acme.com"
+
+rancher_url = "https://rancher.acme.com"
+rancher_access_key = "token-abc"
+rancher_secret_key = "abc123"
+
+vsphere_datacenter = "HE-FMT"
+vsphere_host = "192.168.100.222"
+vsphere_datastore = "datastore-192-168-100-222"
+vsphere_network = "VM Network"
+vsphere_template = "vm-templates/rancheros-v1.4.0-golden"
+vsphere_folder = "k8s-nodes"
+
+guest_default_gateway = "192.168.100.1"
+guest_primary_dns = "8.8.8.8"
+guest_secondary_dns = "8.8.4.4"
+guest_authorized_ssh_key = "ssh-rsa abcdef user@host",
+
+
