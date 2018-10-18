@@ -60,7 +60,7 @@ resource "vsphere_virtual_machine" "masters" {
     inline = [
       "sudo echo '${var.guest_authorized_ssh_key}' > /home/rancher/.ssh/authorized_keys",
       "sudo ros config set ssh_authorized_keys ['${var.guest_authorized_ssh_key}']",
-      "${rancher2_cluster.cluster.cluster_registration_token.0.node_command} --worker",
+      "${rancher2_cluster.cluster.cluster_registration_token.0.node_command} --etcd --controlplane",
     ]
 
     connection {
